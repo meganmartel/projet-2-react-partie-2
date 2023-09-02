@@ -8,7 +8,7 @@ import Card from 'react-bootstrap/Card';
 const CategoryList = () => {
     const mealService = new MealService();
 
-    const {isLoading, isError, data, error} = useQuery({
+    const {isLoading, isError, data} = useQuery({
         queryKey: ['category'],
         queryFn: () => mealService.getAllCategories(),
     });
@@ -17,7 +17,7 @@ const CategoryList = () => {
         return <div>Loading...</div>;
     }
 
-    if (error) {
+    if (isError) {
         return <div>Error fetching data</div>;
     }
 
