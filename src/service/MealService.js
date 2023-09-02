@@ -14,13 +14,13 @@ class MealService {
         return await res.json();
     };
 
-    async getRecipeList() {
+    async getRecipeList(category) {
         const res = await fetch(`${this.baseUrl}${this.filterCategory}${category}`);
         if (!res.ok) throw new Error("Failed to fetch recipe list");
         return await res.json();
     };
 
-    async getRecipeDetails() {
+    async getRecipeDetails(id) {
         const res = await fetch(`${this.baseUrl}${this.lookupMeal}${id}`);
         if (!res.ok) throw new Error("Failed to fetch recipe details");
         return await res.json();

@@ -9,7 +9,7 @@ const CategoryList = () => {
     const mealService = new MealService();
 
     const {isLoading, isError, data} = useQuery({
-        queryKey: ['category'],
+        queryKey: ['categoryList'],
         queryFn: () => mealService.getAllCategories(),
     });
 

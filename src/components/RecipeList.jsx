@@ -6,6 +6,7 @@ import MealService from '../service/MealService';
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
+import Image from 'react-bootstrap/Image';
 
 
 
@@ -14,7 +15,7 @@ const RecipeList = () => {
     const mealService = new MealService();
 
     const {isLoading, isError, data} = useQuery({
-        queryKey: ['category', params.categoryName],
+        queryKey: ['recipeList', params.categoryName],
         queryFn: () => mealService.getRecipeList(params.categoryName),
     });
 
@@ -38,7 +39,7 @@ const RecipeList = () => {
                                 <Link to={`/meals/${meal.strMeal}`} key={meal.idMeal}>
                                     <Card.Subtitle>{meal.strMeal}</Card.Subtitle>
                                 </Link>
-                                <Col nd={1}>
+                                <Col>
                                     <Image src={meal.strMealThumb} alt={meal.strMeal}/>
                                 </Col>
                             </div>
