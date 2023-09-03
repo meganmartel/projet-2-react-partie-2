@@ -1,6 +1,6 @@
 import React from 'react'
 import {useQuery} from "@tanstack/react-query"
-import MealService from "../service/MealService";
+import MealService from "../../service/MealService";
 import { Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
@@ -9,7 +9,7 @@ const CategoryList = () => {
     const mealService = new MealService();
 
     const {isLoading, isError, data} = useQuery({
-        queryKey: ['categoryList'],
+        queryKey: ['categories'],
         queryFn: () => mealService.getAllCategories(),
     });
 

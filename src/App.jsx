@@ -1,8 +1,8 @@
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 import { Route, Routes } from "react-router-dom";
-import CategoryList from "./components/CategoryList";
-import RecipeList from "./components/RecipeList";
-import RecipeDetails from "./components/RecipeDetails";
+import CategoryList from "./components/CategoryList/CategoryList";
+import RecipeList from "./components/RecipeList/RecipeList";
+import RecipeDetails from "./components/RecipeDetails/RecipeDetails";
 import './App.css';
 
 const client = new QueryClient();
