@@ -22,14 +22,14 @@ const CategoryList = () => {
     }
 
     return (
-    <Container>
-        <h1>Recipes Book</h1>
-        <Card>
-            <Card.Title>All Categories</Card.Title>
-            <div>
+    <Container className='mt-5'>
+        <h1 className='text-uppercase text-center'>Recipes Book</h1>
+        <Card className='w-1/4 mx-auto mt-4 p-3'>
+            <Card.Title className='text-center'>All Categories</Card.Title>
+            <div className='my-3'>
                 {data && data.categories.map(category =>
                     <Link to={`/categories/${category.strCategory}`} key={category.idCategory}>
-                        <Card.Subtitle>{category.strCategory}</Card.Subtitle>
+                        <Card.Subtitle className='text-center p-2 text-black text-decoration-line: underline'>{category.strCategory}</Card.Subtitle>
                     </Link>
                 )}
             </div>

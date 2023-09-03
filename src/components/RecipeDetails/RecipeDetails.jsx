@@ -30,14 +30,14 @@ const RecipeDetails = () => {
 
     return (
         <Container>
-            <Link to='/'>Return to Categories</Link>
-            <Card>
+            <Link className='text-black' to='/'>Return to Categories</Link>
+            <Card className='mt-5 w-1/2 mx-auto p-3'>
                 <Col>
                     {data && data.meals.map(details =>
                         <Col key={details.idMeal}>
-                            <Card.Title>{details.strMeal}</Card.Title>
-                            <Card.Text>{details.strCategory}</Card.Text>
-                            <Image src={details.strMealThumb} alt={details.strMeal}/>
+                            <Card.Title className='text-center'>{details.strMeal}</Card.Title>
+                            <Card.Text className='text-center'>{details.strCategory}</Card.Text>
+                            <Image className='h-96 mx-auto mb-4' src={details.strMealThumb} alt={details.strMeal}/>
                             <Accordeon details={details}></Accordeon>
                         </Col>
                     )}

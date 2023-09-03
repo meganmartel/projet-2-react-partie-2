@@ -29,18 +29,18 @@ const RecipeList = () => {
 
     return (
         <Container>
-            <Link to='/'>Return to Categories</Link>
-            <Card>
+            <Link className='text-black' to='/'>Return to Categories</Link>
+            <Card className='mt-5 w-1/3 mx-auto p-3'>
                 <Col>
-                    <Card.Title>{params.categoryName}</Card.Title>
+                    <Card.Title className='text-center mb-4'>{params.categoryName}</Card.Title>
                     <div>
                         {data && data.meals.map(meal =>
                             <div key={meal.strMeal}>
                                 <Link to={`/meals/${meal.idMeal}`}>
-                                    <Card.Subtitle>{meal.strMeal}</Card.Subtitle>
+                                    <Card.Subtitle className='text-center text-black text-decoration-line: underline mb-3'>{meal.strMeal}</Card.Subtitle>
                                 </Link>
                                 <Col>
-                                <Image src={meal.strMealThumb} alt={meal.strMeal}/>
+                                <Image className='h-36 mx-auto mb-5' src={meal.strMealThumb} alt={meal.strMeal}/>
                                 </Col>
                             </div>
                             )}
