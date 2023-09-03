@@ -7,6 +7,7 @@ import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
+import Details from './Details';
 
 
 
@@ -37,6 +38,7 @@ const RecipeDetails = () => {
                             <Card.Title>{details.strMeal}</Card.Title>
                             <Card.Text>{details.strCategory}</Card.Text>
                             <Image src={details.strMealThumb} alt={details.strMeal}/>
+
                         </Col>
                     )}
                 </Col>
