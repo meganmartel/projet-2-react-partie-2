@@ -38,7 +38,7 @@ const RecipeDetails = () => {
                             <Card.Title>{details.strMeal}</Card.Title>
                             <Card.Text>{details.strCategory}</Card.Text>
                             <Image src={details.strMealThumb} alt={details.strMeal}/>
-                            <Details>{details.strIngredient}</Details>
+                            <Details details={details}></Details>
                         </Col>
                     )}
                 </Col>
