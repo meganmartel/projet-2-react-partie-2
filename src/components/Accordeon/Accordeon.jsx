@@ -4,7 +4,7 @@ import Details from '../RecipeDetails/Details';
 
 const Accordeon = ({details}) => {
   return (
-    <Accordion defaultActiveKey="0">
+    <Accordion>
         <Accordion.Item eventKey="0">
             <Accordion.Header>Ingredients And Measures</Accordion.Header>
             <Accordion.Body>
