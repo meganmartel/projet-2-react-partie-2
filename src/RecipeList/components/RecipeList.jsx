@@ -2,7 +2,7 @@ import React from 'react'
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import { Link } from 'react-router-dom';
-import MealService from '../../service/MealService';
+import MealService from '../../RecipeList/service/MealService';
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
@@ -26,6 +26,12 @@ const RecipeList = () => {
     if (isError) {
         return <div>Error fetching data</div>;
     }
+
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(updateRecipeList(data));
+    }, [dispatch, data]);
 
     return (
         <Container>
