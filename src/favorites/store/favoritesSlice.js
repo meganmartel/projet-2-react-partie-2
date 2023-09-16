@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-import reducers from './favoritesReducers';
+import reducers from '../store/favoriteReducers';
 
 export const favoriteSlice = createSlice({
 	name: 'favorite',

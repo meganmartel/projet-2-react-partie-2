@@ -8,6 +8,7 @@ import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import Accordeon from '../Accordeon/Accordeon';
+import FavoriteButton from '../../favorites/components/FavoriteButton';
 
 
 
@@ -39,6 +40,7 @@ const RecipeDetails = () => {
                             <Card.Text className='text-center'>{details.strCategory}</Card.Text>
                             <Image className='h-96 mx-auto mb-4' src={details.strMealThumb} alt={details.strMeal}/>
                             <Accordeon details={details}></Accordeon>
+                            <FavoriteButton recipe={details}></FavoriteButton>
                         </Col>
                     )}
                 </Col>
