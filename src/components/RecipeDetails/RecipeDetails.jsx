@@ -32,6 +32,7 @@ const RecipeDetails = () => {
     return (
         <Container>
             <Link className='text-black' to='/'>Return to Categories</Link>
+            <Link className='text-black ml-5' to='/'>Favorites Recipes</Link>
             <Card className='mt-5 w-1/2 mx-auto p-3'>
                 <Col>
                     {data && data.meals.map(details =>

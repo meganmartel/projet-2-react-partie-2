@@ -31,6 +31,7 @@ const RecipeList = () => {
     return (
         <Container>
             <Link className='text-black' to='/'>Return to Categories</Link>
+            
             <Card className='mt-5 w-1/3 mx-auto p-3'>
                 <Col>
                     <Card.Title className='text-center'>{params.categoryName}</Card.Title>
