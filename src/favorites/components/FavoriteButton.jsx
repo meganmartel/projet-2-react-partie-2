@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { addFavorite, removeFavorite } from "../store/favoritesSlice";
 import { favoritesSelector } from "../store/favoriteSelectors";
+import React from 'react';
 
 const FavoriteButton = ({ recipe }) => {
   const dispatch = useDispatch();

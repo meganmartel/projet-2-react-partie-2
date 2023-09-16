@@ -20,13 +20,13 @@ const FavoritesRecipes = () => {
             <Col>
                 <Card.Title className='text-center'>Favorites Recipes</Card.Title>
                 <div>
-                    {favorites.map( recipe =>
+                    {favorites.map(recipe =>
                         <div key={recipe.idMeal}>
-                            <Link to={`/meals/${meal.idMeal}`}>
-                                <Card.Subtitle className='text-center text-black text-decoration-line: underline mb-3 mt-4'>{meal.strMeal}</Card.Subtitle>
+                            <Link to={`/meals/${recipe.idMeal}`}>
+                                <Card.Subtitle className='text-center text-black text-decoration-line: underline mb-3 mt-4'>{recipe.strMeal}</Card.Subtitle>
                             </Link>
                             <Col>
-                                <Image className='h-36 mx-auto' src={meal.strMealThumb} alt={meal.strMeal}/>
+                                <Image className='h-36 mx-auto' src={recipe.strMealThumb} alt={recipe.strMeal}/>
                             </Col>
                             <FavoriteButton recipe={recipe}/>
                         </div>
