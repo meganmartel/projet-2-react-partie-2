@@ -27,11 +27,6 @@ const RecipeList = () => {
         return <div>Error fetching data</div>;
     }
 
-    const dispatch = useDispatch();
-
-    useEffect(() => {
-        dispatch(updateRecipeList(data));
-    }, [dispatch, data]);
 
     return (
         <Container>
